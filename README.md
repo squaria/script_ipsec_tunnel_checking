@@ -8,6 +8,7 @@ sudo systemctl enable nordvpn_is_down.service</code>
 Then move nordvpn_is_down.sh into /opt/ and
 <code>sudo chown root:root /opt/nordvpn_is_down.sh
 sudo chmod +x /opt/nordvpn_is_down.sh</code>
+Change "name_of_the_tunnel" to the name of your tunnel in nordvpn_is_down.sh file.
 
 And finally, run the service with
 <code>sudo service nordvpn_is_down start</code>
