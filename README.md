@@ -3,13 +3,13 @@ Script to check if a ipsec tunnel (Strongswan) is up and running for high availa
 
 Move nordvpn_is_down.service into /etc/systemd/system/ and
 
-<code>sudo chown root:root /etc/systemd/system/nordvpn_is_down.service
-sudo systemctl enable nordvpn_is_down.service</code>
+<code>sudo chown root:root /etc/systemd/system/nordvpn_is_down.service</code>
+<code>sudo systemctl enable nordvpn_is_down.service</code>
 
 Then move nordvpn_is_down.sh into /opt/ and
 
-<code>sudo chown root:root /opt/nordvpn_is_down.sh
-sudo chmod +x /opt/nordvpn_is_down.sh</code>
+<code>sudo chown root:root /opt/nordvpn_is_down.sh</code>
+<code>sudo chmod +x /opt/nordvpn_is_down.sh</code>
 
 Change "name_of_the_tunnel" to the name of your tunnel in nordvpn_is_down.sh file.
 
