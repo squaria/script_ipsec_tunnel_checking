@@ -1,0 +1,17 @@
+[Unit]
+Description=Check if ipsec strongswan's tunnel is up
+After=network-online.target
+
+[Service]
+Type=simple
+
+User=root
+Group=root
+UMask=007
+
+ExecStart=/bin/bash /opt/tunnel_is_down.sh
+
+Restart=on-failure
+ 
+[Install]
+WantedBy=multi-user.target
