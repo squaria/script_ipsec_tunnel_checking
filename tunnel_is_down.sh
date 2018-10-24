@@ -10,7 +10,7 @@ do
                         echo "tunnel closed reup"
                         /usr/sbin/ipsec up name_of_the_tunnel
                         sleep 8s
-                        last=$(journalctl --unit=nordvpn_is_down.service -n 1 --no-pager | grep -e "connection 'nordvpn' established successfully" | wc -l) # grep the last line of the service's journal and verify if ipsec (strongswan) is started. If not, the last is "tunnel closed reup" because "ipsec up nordvpn" return nothing as long as ipsec is not started.
+                        last=$(journalctl --unit=tunnel_is_down.service -n 1 --no-pager | grep -e "connection 'name_of_the_tunnel' established successfully" | wc -l) # grep the last line of the service's journal and verify if ipsec (strongswan) is started. If not, the last is "tunnel closed reup" because "ipsec up nordvpn" return nothing as long as ipsec is not started.
                                 if [[ "$last" -eq "0" ]]
                                         then
                                                 echo "Strongswan is shutdown, restart"
